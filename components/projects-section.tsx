@@ -34,11 +34,7 @@ export function ProjectsSection() {
     <section id="projects" className="py-20 bg-muted">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="font-work-sans font-bold text-3xl md:text-4xl mb-4 text-foreground">Projects</h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            A showcase of my technical projects demonstrating problem-solving skills, programming proficiency, and
-            creative thinking.
-          </p>
+          <h2 className="font-sans font-bold text-3xl md:text-4xl mb-4 text-primary">Projects</h2>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -55,7 +51,7 @@ export function ProjectsSection() {
                 />
               </div>
               <CardHeader>
-                <CardTitle className="font-work-sans text-xl text-foreground">{project.title}</CardTitle>
+                <CardTitle className="font-sans text-xl text-foreground">{project.title}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground leading-relaxed">{project.description}</p>
@@ -65,14 +61,6 @@ export function ProjectsSection() {
                       {tech}
                     </span>
                   ))}
-                </div>
-                <div className="flex gap-3 pt-2">
-                  <Button variant="outline" size="sm" className="flex-1 bg-transparent">
-                    View Code
-                  </Button>
-                  <Button size="sm" className="flex-1">
-                    Live Demo
-                  </Button>
                 </div>
               </CardContent>
             </Card>

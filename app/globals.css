@@ -11,20 +11,20 @@
   --card-foreground: oklch(0.95 0 0); /* White text on cards */
   --popover: oklch(0.18 0.05 240); /* Navy for popovers */
   --popover-foreground: oklch(0.95 0 0); /* White text in popovers */
-  --primary: oklch(0.75 0.15 60); /* Gold primary color */
+  --primary: #ecb365; /* Gold primary color */
   --primary-foreground: oklch(0.15 0.05 240); /* Navy text on gold */
   --secondary: oklch(0.95 0 0); /* White secondary */
   --secondary-foreground: oklch(0.15 0.05 240); /* Navy text on white */
   --muted: oklch(0.2 0.05 240); /* Muted navy sections */
   --muted-foreground: oklch(0.8 0 0); /* Light gray for descriptions */
-  --accent: oklch(0.75 0.15 60); /* Gold accent */
+  --accent: #ecb365; /* Gold accent */
   --accent-foreground: oklch(0.15 0.05 240); /* Navy text on gold */
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
   --border: oklch(0.3 0.05 240); /* Navy borders */
   --input: oklch(0.18 0.05 240); /* Navy input backgrounds */
-  --ring: oklch(0.75 0.15 60 / 0.5); /* Gold focus ring */
-  --chart-1: oklch(0.75 0.15 60); /* Gold */
+  --ring: #ecb365; /* Gold focus ring */
+  --chart-1: #ecb365; /* Gold */
   --chart-2: oklch(0.95 0 0); /* White */
   --chart-3: oklch(0.15 0.05 240); /* Navy */
   --chart-4: oklch(0.8 0 0); /* Light gray */
@@ -32,13 +32,14 @@
   --radius: 0.5rem;
   --sidebar: oklch(0.12 0.05 240); /* Darker navy sidebar */
   --sidebar-foreground: oklch(0.95 0 0); /* White sidebar text */
-  --sidebar-primary: oklch(0.75 0.15 60); /* Gold primary */
+  --sidebar-primary: #ecb365; /* Gold primary */
   --sidebar-primary-foreground: oklch(0.15 0.05 240); /* Navy text */
   --sidebar-accent: oklch(0.2 0.05 240); /* Navy accent */
   --sidebar-accent-foreground: oklch(0.95 0 0); /* White text */
   --sidebar-border: oklch(0.3 0.05 240); /* Navy border */
-  --sidebar-ring: oklch(0.75 0.15 60 / 0.5); /* Gold focus ring */
+  --sidebar-ring: #ecb365; /* Gold focus ring */
   --font-playfair: "Playfair Display", serif;
+  --font-inter: "Inter", sans-serif;
 }
 
 .dark {
@@ -128,8 +129,28 @@
   html {
     scroll-behavior: smooth;
   }
+
+  /* Hide scrollbar for webkit browsers */
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+
+  /* Hide scrollbar for Firefox */
+  html {
+    scrollbar-width: none;
+  }
+
+  /* Hide scrollbar for IE and Edge */
+  body {
+    -ms-overflow-style: none;
+  }
 }
 
 .hero-fancy-font {
-  font-family: var(--font-playfair);
+  font-family: var(--font-inter);
+}
+
+.font-inter {
+  font-family: var(--font-inter);
 }

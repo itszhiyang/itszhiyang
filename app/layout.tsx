@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter, Work_Sans, Playfair_Display } from "next/font/google"
+import { Inter, Playfair_Display, Pacifico } from "next/font/google"
 import "./globals.css"
 
 const inter = Inter({
@@ -9,16 +9,17 @@ const inter = Inter({
   variable: "--font-inter",
 })
 
-const workSans = Work_Sans({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-work-sans",
-})
-
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-playfair",
+})
+
+const pacifico = Pacifico({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-pacifico",
+  weight: "400",
 })
 
 export const metadata: Metadata = {
@@ -34,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${workSans.variable} ${playfairDisplay.variable} antialiased`}>
+    <html lang="en" className={`${inter.variable} ${playfairDisplay.variable} ${pacifico.variable} antialiased`}>
       <body className="font-sans">{children}</body>
     </html>
   )
